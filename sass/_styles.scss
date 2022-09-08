@@ -1,1 +1,80 @@
 // general styling
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $ff-body;
+  font-size: $fs-base;
+  font-weight: $fw-400;
+  background-color: $dark-cyan;
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 35vh right 52vw, top 52vh left 48vw;
+  padding-inline: 1.5rem;
+
+  @media (max-width: 600px) {
+    background-size: cover;
+    background-position: bottom 60vh right 45vw, top 52vh left 48vw;
+  }
+}
+
+.card {
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 50px 100px 0px rgba($dark-blue, 0.35);
+
+  &-image {
+    border-radius: 50%;
+    outline: 5px solid #fff;
+    margin-top: -48px;
+    margin-inline: auto;
+  }
+}
+
+h1 {
+  color: $dark-blue;
+  font-size: inherit;
+  padding-top: 1.25em;
+
+  span {
+    font-weight: $fw-400;
+    color: $gray-blue;
+    padding-left: 0.5ch;
+  }
+}
+
+h2 {
+  font-weight: $fw-400;
+  font-size: 0.9rem;
+  color: $gray-blue;
+  padding-top: 0.4em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba($dark-gray, 0.25);
+  padding: 1.5rem 1.25rem;
+  dl {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  dt {
+    font-size: 10px;
+    color: $gray-blue;
+    letter-spacing: 1.5px;
+  }
+
+  dd {
+    font-weight: $fw-700;
+    color: $dark-blue;
+  }
+}

@@ -1,1 +1,21 @@
-// variables
+// breakpoints
+
+$bp-mobile: 375px;
+$bp-desktop: 1440px;
+
+// colors
+
+$dark-cyan: hsl(185, 75%, 39%);
+$dark-blue: hsl(229, 23%, 23%);
+$gray-blue: hsl(227, 10%, 46%);
+$dark-gray: hsl(0, 0%, 59%);
+
+// typography
+
+$ff-body: 'Kumbh Sans', sans-serif;
+
+// 18px
+$fs-base: 1.125rem;
+
+$fw-400: 400;
+$fw-700: 700;
