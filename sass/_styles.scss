@@ -13,9 +13,9 @@ body {
   background-repeat: no-repeat;
   background-position: bottom 35vh right 52vw, top 52vh left 48vw;
   padding-inline: 1.5rem;
+  background-size: cover;
 
   @media (max-width: 600px) {
-    background-size: cover;
     background-position: bottom 60vh right 45vw, top 52vh left 48vw;
   }
 }
