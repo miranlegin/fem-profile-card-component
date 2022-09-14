@@ -1,5 +1,9 @@
 // general styling
 
+html {
+  overflow: hidden;
+}
+
 body {
   display: flex;
   align-items: center;
@@ -8,15 +12,37 @@ body {
   font-size: $fs-base;
   font-weight: $fw-400;
   background-color: $dark-cyan;
-  background-image: url(../images/bg-pattern-top.svg),
-    url(../images/bg-pattern-bottom.svg);
-  background-repeat: no-repeat;
-  background-position: bottom 35vh right 52vw, top 52vh left 48vw;
   padding-inline: 1.5rem;
-  background-size: cover;
 
-  @media (max-width: 600px) {
-    background-position: bottom 60vh right 45vw, top 52vh left 48vw;
+  // bubbles
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  // top bubble
+
+  &::before {
+    bottom: 50vh;
+    right: 50vw;
+    background-image: url(../images/bg-pattern-top.svg);
+    background-position: bottom right;
+  }
+
+  // bottom bubble
+
+  &::after {
+    top: 50vh;
+    left: 50vw;
+    background-image: url(../images/bg-pattern-bottom.svg);
+    background-position: top left;
   }
 }
 
